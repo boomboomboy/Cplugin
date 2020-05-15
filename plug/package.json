@@ -1,12 +1,12 @@
 {
-  "name": "vue-sxlymsg",
-  "version": "0.1.3",
+  "name": "vue-cplugin",
+  "version": "0.1.0",
   "private": false,
   "main": "./src/plugin/c-plugin/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib --name sxlymsg --dest plugin  src/plugin/c-plugin/index.js",
+    "build:lib": "vue-cli-service build --target lib --name cplugin --dest plugin  src/plugin/c-plugin/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

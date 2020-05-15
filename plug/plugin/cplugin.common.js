@@ -548,4 +548,4 @@ var $Cload;
 /***/ })
 
 /******/ });
-//# sourceMappingURL=sxlymsg.common.js.map
+//# sourceMappingURL=cplugin.common.js.map

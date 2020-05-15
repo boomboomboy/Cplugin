@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["sxlymsg"] = factory();
+		exports["cplugin"] = factory();
 	else
-		root["sxlymsg"] = factory();
+		root["cplugin"] = factory();
 })((typeof self !== 'undefined' ? self : this), function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -558,4 +558,4 @@ var $Cload;
 
 /******/ });
 });
-//# sourceMappingURL=sxlymsg.umd.js.map
+//# sourceMappingURL=cplugin.umd.js.map
