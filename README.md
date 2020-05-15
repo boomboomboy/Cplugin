@@ -1,6 +1,7 @@
 # Cplugin
 插件库
 本插件目前仅支持vue
+
 npm 下载
 npm i vue-cplugin
 配置
