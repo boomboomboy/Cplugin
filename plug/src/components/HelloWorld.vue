@@ -4,7 +4,16 @@
     <button class="btn_loading" @click="showCloading">loading切换</button>
     <button class="btn_loading" @click="showMsg">message</button>
     <ctable :thList='thList' :tableData='tableData'></ctable>
-    <c-input v-model="msg" />
+    <!-- <c-input v-model="msg" /> -->
+    <c-form>
+      <c-form-item >
+        <template #label>
+          耦合
+        </template>
+        <c-input v-model="msg"  />
+      </c-form-item>
+    </c-form>
+    
   </div>
 </template>
 
@@ -35,7 +44,7 @@ export default {
   },
   components: {
 
-  }
+  },
 };
 </script>
 

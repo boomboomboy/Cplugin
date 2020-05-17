@@ -2,10 +2,14 @@ import Cloading from './Cloading/c-loading.vue'
 import Cmsg from './Cmessage/c-message.vue'
 import ctable from './Ctable/c-table.vue'
 import cinput from './Cinput/c-input.vue'
+import cform from './Cform/c-form.vue'
+import cinputitem from './CformItem/c-form-item.vue'
 // 存储组件列表
 const components = [
     ctable,
-    cinput
+    cinput,
+    cform,
+    cinputitem
   ]
   let $Cload;let $Cmsg;
 export default {

@@ -28,6 +28,10 @@ export default {
             defalut:[]
         },
         
+    },
+    mounted(){
+      
+      
     }
 };
 </script>

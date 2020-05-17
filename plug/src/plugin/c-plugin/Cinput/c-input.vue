@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input :type="type" :class="{'.c-input':cinput,'.cfocus':isfocus}" @focus="cfocus()" :value="value" />
+        <input :type="type" :class="{'.c-input':cinput,'.cfocus':isfocus}" @focus="cfocus()" :value="value"  />
     </div>
 </template>
 
@@ -16,10 +16,7 @@ export default {
             type:String,
             default:''
         },
-        vModel:{
-            type:String,
-            default:''
-        }
+        
         
     },
     data(){
