@@ -5,7 +5,7 @@ Vue.config.productionTip = false
 // import Cloading from 'vue-sxlymsg'
 // Vue.use(Cloading)
 
-import Cplugin from 'vue-cplugin'
+import Cplugin from './plugin/c-plugin/index'
 Vue.use(Cplugin)
 new Vue({
   render: h => h(App),

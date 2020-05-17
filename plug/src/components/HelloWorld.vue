@@ -3,17 +3,26 @@
     <!-- <msg></msg> -->
     <button class="btn_loading" @click="showCloading">loading切换</button>
     <button class="btn_loading" @click="showMsg">message</button>
+    <ctable :thList='thList' :tableData='tableData'></ctable>
+    <c-input v-model="msg" />
   </div>
 </template>
 
 <script>
-// import msg from "../plugin/c-message/c-message";
 export default {
-  name: "Hello Cplugin",
+  name: "Cplugin",
   data() {
     return {
       msg: "csj的第一个插件",
-      msg2: "csj的第二个插件"
+      msg2: "csj的第二个插件",
+      tableData:[
+        {name:'csj',id:1,age:18}
+      ],
+      thList:[
+        {value:'名称',id:100},
+        {value:'id',id:99},
+        {value:'年龄',id:98},
+      ]
     };
   },
   methods: {
@@ -25,7 +34,7 @@ export default {
     }
   },
   components: {
-    // msg
+
   }
 };
 </script>
