@@ -1,7 +1,7 @@
 <template>
     <div class='c-form-item'>   
       <label  class="c-form-item__label">
-        <slot name="label">{{label}}</slot>
+        <slot name="label">{{label}}</slot>:
       </label>
       <div class="c-form-item-content">
           <slot></slot>
@@ -24,7 +24,7 @@ export default {
     },
     mounted(){
         // console.log(this.cForm.disabled);
-        console.log(this.$parent);
+        // console.log(this.$parent);
     }
 }
 </script>
@@ -36,6 +36,8 @@ export default {
 }
 .c-form-item__label {
     width: 100px;
+    line-height: 26px;
+    font-size: 14px;
 }
     .c-form-item-content {
         flex:1;

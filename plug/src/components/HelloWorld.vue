@@ -12,6 +12,10 @@
         </template>
         <c-input v-model="msg"  />
       </c-form-item>
+      <c-form-item label='select'>
+        
+        <c-select :selectData='selectData'></c-select>
+      </c-form-item>
     </c-form>
     
   </div>
@@ -31,7 +35,33 @@ export default {
         {value:'名称',id:100},
         {value:'id',id:99},
         {value:'年龄',id:98},
-      ]
+      ],
+      selectData:[{
+        name:1,
+        value:'hero'
+      },
+      {
+        name:2,
+        value:'jack'
+      },{
+        name:3,
+        value:'jack'
+      },{
+        name:4,
+        value:'jack'
+      },
+      {
+        name:5,
+        value:'jack'
+      },
+      {
+        name:6,
+        value:'jack'
+      },
+      {
+        name:7,
+        value:'jack'
+      }]
     };
   },
   methods: {

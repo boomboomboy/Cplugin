@@ -1,6 +1,6 @@
 {
   "name": "vue-cplugin",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "main": "./src/plugin/c-plugin/index.js",
   "scripts": {

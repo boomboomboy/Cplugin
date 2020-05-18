@@ -4,12 +4,16 @@ import ctable from './Ctable/c-table.vue'
 import cinput from './Cinput/c-input.vue'
 import cform from './Cform/c-form.vue'
 import cinputitem from './CformItem/c-form-item.vue'
+import cselect from './Cselect/c-select.vue'
+import cdropdown from './Cdropdown/c-drop-down.vue'
 // 存储组件列表
 const components = [
     ctable,
     cinput,
     cform,
-    cinputitem
+    cinputitem,
+    cselect,
+    cdropdown
   ]
   let $Cload;let $Cmsg;
 export default {
