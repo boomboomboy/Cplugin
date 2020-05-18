@@ -39,4 +39,4 @@
 		props:{
 		  selectData:[{value:'',name:''}],
 		}
-		select接受一个数组,内部dropdown插件，目前容器最多显示5组数据，超出则滚动显示，后续待优化
+		select接受一个数组，内部引入c-drop-down组件件，该组件尚未开放，目前容器最多显示5组数据，超出则滚动显示，后续待优化
