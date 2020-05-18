@@ -22,12 +22,12 @@
 		}
 ### c-form 表单
 		props:[] //空  前面未做配置
-### c-form-item
+### c-form-item 表单项
 		props:{
 		  label:'',
 		}
 		label通过slot实现  name为'label' 可通过插槽自定义
-### c-input
+### c-input 输入框
 		props:{
 		  type:'',
 		  readonly:Boolean，
@@ -35,7 +35,7 @@
 		  suffix_icon:'',//input内容后的图标
 		}
 		input的值可通过v-model绑定 type接受原生input类型 暂未二次封装
-### c-select
+### c-select 选择器
 		props:{
 		  selectData:[{value:'',name:''}],
 		}
