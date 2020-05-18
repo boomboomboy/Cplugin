@@ -30,5 +30,13 @@
 ### c-input
 		props:{
 		  type:'',
+		  readonly:Boolean，
+		  prefix_icon:'', //input内容前的图标
+		  suffix_icon:'',//input内容后的图标
 		}
-		ssinput的值可通过v-model绑定 type接受原生input类型 暂未二次封装
+		input的值可通过v-model绑定 type接受原生input类型 暂未二次封装
+### c-select
+		props:{
+		  selectData:[{value:'',name:''}],
+		}
+		select接受一个数组,内部dropdown插件，目前容器最多显示5组数据，超出则滚动显示，后续待优化
