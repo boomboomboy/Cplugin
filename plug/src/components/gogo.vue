@@ -1,10 +1,6 @@
 <template>
   <div class="hello">
-    this is hello
-    <!-- <msg></msg> -->
-    <button class="btn_loading" @click="showCloading">loading切换</button>
-    <button class="btn_loading" @click="showMsg">message</button>
-    <ctable :thList='thList' :tableData='tableData'></ctable>
+    this is gogo
     <!-- <c-input v-model="msg" /> -->
     <c-form>
       <c-form-item >

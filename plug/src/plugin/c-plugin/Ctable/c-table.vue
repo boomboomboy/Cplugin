@@ -1,11 +1,9 @@
 <template>
   <div>
     <table class="table">
-        <thead >
-            <th v-for="th in thList" :key="th.id">
-                {{th.value}}
-            </th>
-        </thead>
+      <thead>
+        <th v-for="th in thList" :key="th.id">{{th.value}}</th>
+      </thead>
       <tr v-for="(row) in tableData" :key="row.key" class="c-tr">
         <td v-for="(value,name) in row" :key="name">
           <span class="c-td">{{value}}</span>
@@ -17,22 +15,18 @@
 
 <script>
 export default {
-  name:'ctable',
-    props:{
-        tableData:{
-            type:Array,
-            defalut:[]
-        },
-        thList:{
-            type:Array,
-            defalut:[]
-        },
-        
+  name: "ctable",
+  props: {
+    tableData: {
+      type: Array,
+      defalut: [],
     },
-    mounted(){
-      
-      
-    }
+    thList: {
+      type: Array,
+      defalut: [],
+    },
+  },
+  mounted() {},
 };
 </script>
 
@@ -43,7 +37,8 @@ export default {
   text-align: center;
 }
 .table td,
-.table th ,.c-td {
+.table th,
+.c-td {
   border: 1px solid #cad9ea;
   color: #666;
   height: 30px;
@@ -52,7 +47,7 @@ export default {
   color: rgba(3, 0, 6, 0.8);
 }
 .table thead th {
-    text-align: center;
+  text-align: center;
   background-color: #cce8eb;
   width: 100px;
 }
@@ -62,7 +57,4 @@ export default {
 .table tr:nth-child(even) {
   background: #f5fafa;
 }
-
-
-
 </style>

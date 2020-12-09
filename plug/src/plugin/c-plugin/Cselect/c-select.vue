@@ -1,32 +1,32 @@
 <template>
   <div class="c-select-group" @click="toggleShowMenu">
-    <c-input type="text"  v-model="value" readonly :suffix_icon="suffix_icon" />
-    <slot name="option"></slot>
+    <c-input type="text" :disabled='disabled'  v-model="value" readonly :suffix_icon="suffix_icon" />
+    
     <transition name="c-show-drop">
-      <c-drop-down :dropData="selectData" v-if="showmenu" @select="setVal"></c-drop-down>
+      <c-drop-down :dropData="selectData" v-show="showmenu" >
+        <slot></slot>
+      </c-drop-down>
     </transition>
     
   </div>
 </template>
 
 <script>
+import bus from '../bus'
 export default {
   name: "cSelect",
   props: {
-    value: {
-      type: String,
-      default: ""
-      
-    },
     selectData: {
       type: Array,
       defalut: []
-    }
+    },
+    disabled:Boolean
   },
   data(){
     return {
       showmenu:false,
-      suffix_icon:'iconfont iconxia'
+      suffix_icon:'iconfont iconxia',
+      value:''
     }
   },
   methods:{
@@ -41,6 +41,11 @@ export default {
     setVal(val){
       this.value =val
     }
+  },
+  mounted(){
+    bus.$on('select',val=>{
+      this.value=val
+    })
   }
 };
 </script>

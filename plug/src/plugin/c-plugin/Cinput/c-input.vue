@@ -5,6 +5,7 @@
       :class="{'c-input':cinput,'cfocus':isfocus}"
       :value="value"
       :readonly="readonly"
+      :disabled='disabled'
     />
     <div class="prefix">
       <i :class="prefix_icon"></i>
@@ -28,6 +29,10 @@ export default {
       default: ""
     },
     readonly: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
       type: Boolean,
       default: false
     },
@@ -63,6 +68,7 @@ export default {
 .c-input {
     -webkit-appearance:none;
   -moz-appearance: none;
+  outline:0;
   width: 150px;
   height: 26px;
   border: 1px solid #dcdfe6;

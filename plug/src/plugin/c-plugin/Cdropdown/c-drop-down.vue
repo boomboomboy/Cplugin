@@ -2,16 +2,20 @@
   <div class="dropdowngroup">
     <ul class="c-drop-ul">
       <li
-        v-for="row in dropData"
+        v-for="(row,index) in dropData"
         :key="row.name"
         class="c-drop-li"
-        @click="selectOption(row.value)"
+        @click="selectOption(row.value,index)"
+        @mouseenter="hoveritem(index)"
+        :class="hover[index]?'hover':''"
       >{{row.value}}</li>
+      <slot></slot>
     </ul>
   </div>
 </template>
 
 <script>
+import bus from "../bus";
 export default {
   name: "cDropDown",
   props: {
@@ -20,10 +24,27 @@ export default {
       defalut: []
     }
   },
+  data() {
+    return {
+      isselect: false,
+      hover: [],
+      selectIndex: null
+    };
+  },
   methods: {
     selectOption(value) {
-      this.$emit("select", value);
+      // this.hoveritem(index);
+      bus.$emit("select", value);
+    },
+    hoveritem(index) {
+      this.dropData.forEach((ele, i) => {
+        this.$set(this.hover, i, false);
+      });
+      this.hover[index] = true;
     }
+  },
+  mounted() {
+    this.$set(this.hover, 0, true);
   }
 };
 </script>
@@ -37,9 +58,9 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 0;
   max-height: 150px;
   transform: translateY(100%);
-  padding: 0 10px;
   background-color: rgba(255, 255, 255, 0.8);
   overflow-y: scroll;
   overflow-x: hidden;
@@ -53,16 +74,27 @@ export default {
   width: 100%;
   list-style: none;
   height: 30px;
+  padding: 0 10px;
   line-height: 30px;
   font-size: 14px;
+  box-sizing: border-box;
   color: #606266;
   cursor: pointer;
 }
-.c-drop-li:not(:last-child) {
-  border-bottom: 1px solid #dcdfe6;
+
+.hover {
+  background-color: rgba(0, 255, 255, 0.1);
 }
+
+.isselect {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+/* .c-drop-li:not(:last-child) {
+  border-bottom: 1px solid #dcdfe6;
+} */
 .c-drop-ul::-webkit-scrollbar {
-  width: 4px;
+  width: 0px;
   /*height: 4px;*/
 }
 .c-drop-ul::-webkit-scrollbar-thumb {

@@ -6,6 +6,7 @@ import cform from './Cform/c-form.vue'
 import cinputitem from './CformItem/c-form-item.vue'
 import cselect from './Cselect/c-select.vue'
 import cdropdown from './Cdropdown/c-drop-down.vue'
+import coption from './Cselect/c-option.vue'
 // 存储组件列表
 const components = [
     ctable,
@@ -13,7 +14,8 @@ const components = [
     cform,
     cinputitem,
     cselect,
-    cdropdown
+    cdropdown,
+    coption
   ]
   let $Cload;let $Cmsg;
 export default {
